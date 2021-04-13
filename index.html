@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel='stylesheet' href="/styles/style.css" />
+        <title>a11y April 2021</title>
+    </head>
+
+    <body>
+
+        <h1>A11y April</h1>
+        
+        <h2>Affordances</h2>
+
+        <p>Make sure you are actually making your <button>buttons</button> button-y.</p>
+
+        <p>Because <span id='inline-button' aria-role="button" role="button">you</span> can't really find the button here...</p>
+
+        <form>
+            <label>
+                Name:
+                <input type="text" name="first-name" placeholder="first name" autocomplete="given-name" />
+            </label>
+            <button>Submit</button>
+        </form>
+
+        <h2>Links</h2>
+        <h3>The wrong way...</h3>
+
+        <p>For more information about Pikachu, 
+            <a href="https://www.serebii.net/pokedex-sm/025.shtml">click here.</a></p>
+
+        <h3>The right way...</h3>
+
+        <p>For more information, visit Serebii's  
+            <a href="https://www.serebii.net/pokedex-sm/025.shtml">Pikachu Page</a>.</p>
+
+        <h2>Semantic HTML</h2>
+
+        <div id="fake-button" role="button">button</div>
+        <button>button</button>
+        <button>button</button>
+
+        <h2>WAI ARIA</h2>
+
+        <div id="percent-loaded">
+
+            <!-- role="progressbar" 
+            aria-valuenow="75"
+            aria-valuemin="0" 
+            aria-valuemax="100" -->
+            
+            <div class="load-block"></div>
+            <div class="load-block"></div>
+            <div class="load-block"></div>
+            <div class="load-block"></div>
+            <div class="load-block"></div>
+            <div class="load-block"></div>
+            <div class="load-block"></div>
+        </div>
+
+        <script src="scripts/script.js" />
+        
+    </body>
+</html>
